@@ -1,0 +1,24 @@
+source = open('PALINDROMEPOEM')
+straka = source.read()
+print straka[:1000]
+import re
+def prep(text):
+    return re.sub('\W+', '', text)
+def pal(word):
+    return word.lower() == word[::-1].lower()
+pal(prep(straka))
+def palmulti(name):
+    result = ''
+    names = name.split()
+    for word in names:
+        wordrevised = re.sub('\W+', '', word)
+        if wordrevised == 'Ss':
+            result = result
+        elif len(wordrevised) == 1:
+            result = result
+        elif wordrevised.lower() == 'did':
+            result = result
+        elif wordrevised.lower() == wordrevised[::-1].lower():
+            result = result + ' ' + wordrevised
+    return result
+    palmulti(straka)
