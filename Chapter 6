@@ -1,0 +1,596 @@
+len('hello world')
+11
+len('2112')
+4
+len(' ')
+1
+hi = 'hello world'
+len(hi)
+11
+len(2112)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-6-f6c5ca2aa569> in <module>()
+----> 1 len(2112)
+
+TypeError: object of type 'int' has no len()
+''[0:1]
+''
+'hello world'[0:500]
+'hello world'
+'hello world'[450:500]
+''
+'hello world'[:3]
+'hel'
+'hello world'[1:]
+'ello world'
+'hello world'[0:]
+'hello world'
+'hello world'[:5]
+'hello'
+'hello world'[6:]
+'world'
+'abcdefgh'[0:9:2]
+'aceg'
+'abcdefgh'[::2]
+'aceg'
+'0123456789'[::2]
+'02468'
+'hello world'[-1]
+'d'
+'hello world'[-1:]
+'d'
+'hello world'[-5:]
+'world'
+wyatt = 'They flee from Brenda that sometime did me seek / With naked toe, stalking in my chamber.'
+'HELLO World'.lower()
+'hello world'
+original = 'Burma Shave'
+lowercase = original.lower()
+lowercase
+'burma shave'
+original
+'Burma Shave'
+original.lower()
+'burma shave'
+wyatt = wyatt.lower()
+wyatt
+'they flee from brenda that sometime did me seek / with naked toe, stalking in my chamber.'
+for c in wyatt:
+    print c
+t
+h
+e
+y
+ 
+f
+l
+e
+e
+ 
+f
+r
+o
+m
+ 
+b
+r
+e
+n
+d
+a
+ 
+t
+h
+a
+t
+ 
+s
+o
+m
+e
+t
+i
+m
+e
+ 
+d
+i
+d
+ 
+m
+e
+ 
+s
+e
+e
+k
+ 
+/
+ 
+w
+i
+t
+h
+ 
+n
+a
+k
+e
+d
+ 
+t
+o
+e
+,
+ 
+s
+t
+a
+l
+k
+i
+n
+g
+ 
+i
+n
+ 
+m
+y
+ 
+c
+h
+a
+m
+b
+e
+r
+.
+for i in range(len(wyatt)):
+    print wyatt[i]
+t
+h
+e
+y
+ 
+f
+l
+e
+e
+ 
+f
+r
+o
+m
+ 
+b
+r
+e
+n
+d
+a
+ 
+t
+h
+a
+t
+ 
+s
+o
+m
+e
+t
+i
+m
+e
+ 
+d
+i
+d
+ 
+m
+e
+ 
+s
+e
+e
+k
+ 
+/
+ 
+w
+i
+t
+h
+ 
+n
+a
+k
+e
+d
+ 
+t
+o
+e
+,
+ 
+s
+t
+a
+l
+k
+i
+n
+g
+ 
+i
+n
+ 
+m
+y
+ 
+c
+h
+a
+m
+b
+e
+r
+.
+for i in range(len(wyatt)):
+    print i, wyatt[i]
+0 t
+1 h
+2 e
+3 y
+4  
+5 f
+6 l
+7 e
+8 e
+9  
+10 f
+11 r
+12 o
+13 m
+14  
+15 b
+16 r
+17 e
+18 n
+19 d
+20 a
+21
+22 t
+23 h
+24 a
+25 t
+26  
+27 s
+28 o
+29 m
+30 e
+31 t
+32 i
+33 m
+34 e
+35  
+36 d
+37 i
+38 d
+39  
+40 m
+41 e
+42  
+43 s
+44 e
+45 e
+46 k
+47  
+48 /
+49  
+50 w
+51 i
+52 t
+53 h
+54  
+55 n
+56 a
+57 k
+58 e
+59 d
+60  
+61 t
+62 o
+63 e
+64 ,
+65  
+66 s
+67 t
+68 a
+69 l
+70 k
+71 i
+72 n
+73 g
+74  
+75 i
+76 n
+77  
+78 m
+79 y
+80  
+81 c
+82 h
+83 a
+84 m
+85 b
+86 e
+87 r
+88 .
+for i in range(len(wyatt)):
+    print str(i) + ': ' + wyatt[i]
+0: t
+1: h
+2: e
+3: y
+4:  
+5: f
+6: l
+7: e
+8: e
+9:  
+10: f
+11: r
+12: o
+13: m
+14:  
+15: b
+16: r
+17: e
+18: n
+19: d
+20: a
+21:
+22: t
+23: h
+24: a
+25: t
+26:  
+27: s
+28: o
+29: m
+30: e
+31: t
+32: i
+33: m
+34: e
+35:  
+36: d
+37: i
+38: d
+39:  
+40: m
+41: e
+42:  
+43: s
+44: e
+45: e
+46: k
+47:  
+48: /
+49:  
+50: w
+51: i
+52: t
+53: h
+54:  
+55: n
+56: a
+57: k
+58: e
+59: d
+60:  
+61: t
+62: o
+63: e
+64: ,
+65:  
+66: s
+67: t
+68: a
+69: l
+70: k
+71: i
+72: n
+73: g
+74:  
+75: i
+76: n
+77:  
+78: m
+79: y
+80:  
+81: c
+82: h
+83: a
+84: m
+85: b
+86: e
+87: r
+88: .
+wyatt = 'They flee from Brenda that sometime did me seek / With naked toe, stalking in my chamber.'
+pair = 0
+for i in range(len(wyatt)):
+    if wyatt[i:i+2] == 'ee':
+        pair = pair + 1
+pair
+2
+def pair(sequence):
+    result = 0
+    for i in range(len(sequence)):
+        if sequence[i:i+2] == 'ee':
+            result = result + 1
+    return result
+pair(wyatt)
+2
+pair = 0
+for i in range(len(wyatt)):
+    if wyatt[i] == wyatt[i+1]:
+        pair = pair + 1
+---------------------------------------------------------------------------
+IndexError                                Traceback (most recent call last)
+<ipython-input-7-fcf08d7131e9> in <module>()
+      1 pair = 0
+      2 for i in range(len(wyatt)):
+----> 3     if wyatt[i] == wyatt[i+1]:
+      4         pair = pair + 1
+
+IndexError: string index out of range
+pair
+3
+pair = 0
+for i in range(len(wyatt)-1):
+    if wyatt[i] == wyatt[i+1]:
+        pair = pair + 1
+pair
+3
+def twin(sequence):
+    result = 0
+    for i in range(len(sequence)-1):
+        if sequence[i] == sequence[i+1]:
+            result = result + 1
+    return result
+twin(wyatt)
+3
+twin('oolong')
+1
+def twin(sequence):
+    result = 0
+    for i in range(len(sequence)-1):
+        if sequence.lower()[i] == sequence.lower()[i+1]:
+            result = result + 1
+    return result
+twin('Oolong')
+1
+text = 'All human beings are born free and equal in dignity and rights. They are endowed with reason and conscience and should act towards one another in a spirit of brotherhood.'
+text
+'All human beings are born free and equal in dignity and rights. They are endowed with reason and conscience and should act towards one another in a spirit of brotherhood,'
+len(text)
+170
+#If "len" allows us to consider units at the character level, how can we count elements at the word level?
+text.split(' ')
+['All',
+ 'human',
+ 'beings',
+ 'are',
+ 'born',
+ 'free',
+ 'and',
+ 'equal',
+ 'in',
+ 'dignity',
+ 'and',
+ 'rights.',
+ 'They',
+ 'are',
+ 'endowed',
+ 'with',
+ 'reason',
+ 'and',
+ 'conscience',
+ 'and',
+ 'should',
+ 'act',
+ 'towards',
+ 'one',
+ 'another',
+ 'in',
+ 'a',
+ 'spirit',
+ 'of',
+ 'brotherhood.']
+ text
+ 'All human beings are born free and equal in dignity and rights. They are endowed with reason and conscience and should act towards one another in a spirit of brotherhood,'
+ len(text.split(' '))
+ 30
+ len(text.split())
+ 30
+ def length(sequence):
+    print len(sequence.split())
+ length(text)
+ 30
+ text.split('and')
+ ['All human beings are born free ',
+ ' equal in dignity ',
+ ' rights. They are endowed with reason ',
+ ' conscience ',
+ ' should act towards one another in a spirit of brotherhood.']
+ hi = 'hello   world'
+ hi.split(' ')
+ ['hello', '', '', 'world']
+ hi = 'hello   world'
+ hi.split()
+ ['hello', 'world']
+ 'ship of theseus'.split()
+ ['ship', 'of', 'theseus']
+ names = ['Bob', 'Carol', 'Ted', 'Alice']
+ ' & '.join(names)
+ 'Bob & Carol & Ted & Alice'
+ ' '.join(names)
+ 'Bob Carol Ted Alice'
+ 
+names = ['Bob', 'Carol', 'Ted', 'Alice']
+' loves '.join(names)
+'Bob loves Carol loves Ted loves Alice'
+names.join(' & ')
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+<ipython-input-32-0024315f33ae> in <module>()
+----> 1 names.join(' & ')
+
+AttributeError: 'list' object has no attribute 'join'
+print '\n'.join(names)
+Bob
+Carol
+Ted
+Alice
+print ' exists.\n'.join(names)
+Bob exists.
+Carol exists.
+Ted exists.
+Alice exists
+
+print ' exists.\n'.join(names) + ' exists.'
+Bob exists.
+Carol exists.
+Ted exists.
+Alice exists.
+for person in names:
+    print person + ' exists.'
+Bob exists.
+Carol exists.
+Ted exists.
+Alice exists.
+exists(names)
+['Bob', 'Carol', 'Ted', 'Alice']
+def exists(sequence):
+    for element in sequence:
+            print element + ' exists.'
+exists(names)
+Bob exists.
+Carol exists.
+Ted exists.
+Alice exists.
+def exists(sequence):
+    print ' exists.\n'.join(sequence) + ' exists.'
+exists(names)
+Bob exists.
+Carol exists.
+Ted exists.
+Alice exists.
+sorted(names)
+['Alice', 'Bob', 'Carol', 'Ted']
+names
+['Bob', 'Carol', 'Ted', 'Alice']
